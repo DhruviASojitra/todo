@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "name": "keval",
+      "address": "surat",
+      "age": "23",
+      "email": "kk@k.com",
+      "contact": "8796541236",
+      "gender": "male",
+      "hobby": [
+        "dancing",
+        "reading"
+      ],
+      "state": "Goa",
+      "id": 7
+    },
+    {
+      "name": "joy",
+      "address": "rajkot",
+      "age": "22",
+      "email": "jj@j.com",
+      "contact": "7896541230",
+      "gender": "male",
+      "hobby": [
+        "reading"
+      ],
+      "state": "Maharashtra",
+      "id": 8
+    },
+    {
+      "name": "nilesk",
+      "address": "rajkoy",
+      "age": "31",
+      "email": "dssd@d.com",
+      "contact": "7896541230",
+      "gender": "male",
+      "hobby": [
+        "reading"
+      ],
+      "state": "Goa",
+      "id": 9
+    },
+    {
+      "name": "Dhruvi",
+      "address": "talala",
+      "age": "12",
+      "email": "dd@d.com",
+      "contact": "7896541230",
+      "gender": "female",
+      "hobby": [
+        "reading"
+      ],
+      "state": "Gujarat",
+      "id": 10
+    },
+    {
+      "name": "nitya",
+      "address": "surat",
+      "age": "9",
+      "email": "nn@n.com",
+      "contact": "7896541230",
+      "gender": "female",
+      "hobby": [
+        "reading",
+        "singing"
+      ],
+      "state": "Panjab",
+      "id": 11
+    },
+    {
+      "name": "fff",
+      "address": "borvav",
+      "email": "hh@h.com",
+      "phone": "8965741230",
+      "website": "natak",
+      "id": 12
+    },
+    {
+      "name": "Nikunj",
+      "address": "Shihor",
+      "email": "nn@n.com",
+      "id": 14
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
