@@ -3,12 +3,14 @@ import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Home from "./components/pages/Home";
 
-import Contact from "./components/pages/Contact";
+import About from "./components/pages/About";
 import Navbar from './components/layout/Navbar';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import NotFound from './components/pages/NotFound';
-import AddUser from './components/users/AddUser';
+import AddData from './components/users/AddData';
 import EditUser from './components/users/EditUser';
+import TodoList from './components/users/TodoList';
+import Calculator from './components/users/Calculator';
 // import Regis from './Regis';
  function App() {
   return (
@@ -17,10 +19,11 @@ import EditUser from './components/users/EditUser';
     <Router>
       <Navbar />
       <Routes>
-                <Route path='/' element={<Home/>}/>
-        
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/users/add' element={<AddUser />}/>
+        <Route path='/' element={<Home/>}/>        
+        <Route path='/about' element={<About/>}/>
+        <Route path='/users/todo' element={<TodoList />}/>
+        <Route path='/users/calculator' element={<Calculator />}/>
+        <Route path='/users/add' element={<AddData />}/>
         <Route path='/users/edit/:id' element={<EditUser />}/>
         <Route element={<NotFound />}/>
        </Routes>

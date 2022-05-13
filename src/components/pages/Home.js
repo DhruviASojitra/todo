@@ -27,6 +27,7 @@ const Home = () => {
                             <th scope="col">Name</th>
                             <th scope="col">Address</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Gender</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -35,9 +36,10 @@ const Home = () => {
                            users.map((user,index)=>(
                                 <tr>
                                     <th scope="row">{index+1}</th>
-                                    <td>{user.name}</td>
+                                    <td>{user.name}</td> 
                                     <td>{user.address}</td>
                                     <td>{user.email}</td>
+                                    <td>{user.gender}</td>
                                     <td>
                                        
                                         <Link className="btn btn-primary edit mr-2" to={`/users/edit/${user.id}`}>Edit</Link>

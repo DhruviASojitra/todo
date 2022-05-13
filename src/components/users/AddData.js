@@ -1,15 +1,16 @@
 import axios from 'axios';
 import React ,{useState} from "react";
+import { Link } from "react-router-dom";
 //import {useHistory} from 'react-router-dom';
-const AddUser = () =>{
+const AddData = () =>{
    // let history=useMemo([]);
     const [user,setUser]=useState({
         name:"",
         address:"",
-        email:""
-        
+        email:"",
+        gender:""
     })
-    const{name,address,email}=user;
+    const{name,address,email,gender}=user;
     const onInputChange = e =>{
         
         setUser({...user,[e.target.name]:e.target.value});
@@ -17,10 +18,11 @@ const AddUser = () =>{
     const onSubmit = async e =>{
         e.preventDefault();
         await axios.post("http://localhost:3322/posts",user);
-       // history.push("/");
+        alert("Data Saved");
     }
     return(
         <>
+      
         <div className='container'>
         <div className='w-75 mx-auto shadow p-5'>
         <h2 className='text-center mb-4'>Add A User</h2>
@@ -48,8 +50,17 @@ const AddUser = () =>{
            name='email'
            value={email}onChange={e=>onInputChange(e)}/>
        </div>
-       
-       <button className='btn btn-primary btn-block' onClick={onSubmit}>Add User</button>
+        <div className="form-group p-3">
+        <h4><label>Select Your Gender:</label></h4>
+         <h5> <input type="radio" value="Male" name="gender" onChange={e => onInputChange(e)} 
+         /> Male
+        <input type="radio" value="Female" name="gender" onChange={e => onInputChange(e)} 
+        /> Female
+        <input type="radio" value="Other" name="gender" onChange={e => onInputChange(e)}
+        /> Other</h5>
+        </div>
+       <button className='btn btn-primary btn-block' onClick={onSubmit}>AddData</button>&nbsp;&nbsp;&nbsp;
+       <Link className="btn btn-primary" to="/">Back To Home</Link>
        </form>
        </div>
        </div>
@@ -57,4 +68,4 @@ const AddUser = () =>{
         
     );
 };
-export default AddUser;
+export default AddData;

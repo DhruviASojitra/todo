@@ -6,24 +6,31 @@ const Navbar = () => {
             <div className="container">
 
                 <a class="navbar-brand" href="#">React User</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <Link class="nav-link" to="/">Home </Link>
+                <div className="collapse navbar-collapse" >
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item active">
+                            <Link className="nav-link" to="/">Home </Link>
                         </li>
                         
-                        <li class="nav-item">
-                            <Link class="nav-link" to="/contact">Contact</Link>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about">About</Link>
                         </li>
-                        
-                        
+                        <li>
+                        <Link className="nav-link add" to="/users/add">AddData</Link>
+                        </li>
+                        <li>
+                        <Link className="nav-link todo" to="/users/todo">TodoList</Link>
+                        </li>
+                        <li>
+                        <Link className="nav-link cal" to="/users/calculator">Calculator</Link>
+                        </li>
                     </ul>
                 </div>
-            <Link className="btn-btn-outline-primary" to="/users/add">Add User</Link>
+            
             </div>
         </nav>
 

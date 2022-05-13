@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import { useParams } from 'react-router-dom'
+import { useParams , Link } from 'react-router-dom'
 
 const EditUser = () => {
     const { id } = useParams();
     const [users, setUser] = useState({
         name: "",
         address: "",
-        email: ""
+        email: "",
+        gender:""
     });
-    const { name, address, email } = users;
+    const { name, address, email, gender } = users;
 
     const onInputChange = e => {
+        //const{name,address,email,gender,checked}=e.target;
         setUser({ ...users, [e.target.name]: e.target.value })
     };
 
@@ -61,8 +63,14 @@ const EditUser = () => {
                             value={email}
                             onChange={e => onInputChange(e)} />
                     </div>
-
-                    <button className="btn btn-warning btn-block" onClick={onUpdate}>Update</button>
+                    <div className="form-group p-3">
+                    <h4><label>Select Your Gender:</label></h4>
+                    <h5><input type="radio" value="Male" name="gender"   onChange={e => onInputChange(e)} /> Male
+                    <input type="radio" value="Female" name="gender" onChange={e => onInputChange(e)} /> Female
+                    <input type="radio" value="Other" name="gender"  onChange={e => onInputChange(e)} /> Other</h5>
+                    </div>
+                    <button className="btn btn-warning btn-block" onClick={onUpdate}>Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Link className="btn btn-primary" to="/">Back To Home</Link>
                 </form>
             </div>
         </div>
